@@ -33,13 +33,14 @@ function approveNote(note){
     return true
 };
 
-
+//API Route | GET request
 router.get("/notes",(req, res) => {
     let result = notes;
     res.json(result);
 
 });
 
+//API Route | POST request
 //setting on what the next id of array, will be and also adding to the database. 
 router.post("/notes",(req, res) => {
     req.body.id = notes.length.toString();
@@ -47,11 +48,13 @@ router.post("/notes",(req, res) => {
     if(!approveNote(req.body)){
         res.status(400).send("It is not formatted.");
     }else{
-        const note = createNewNote(req.body, notes);
+        const note = newNote(req.body, notes);
         res.json(notes);
     }
 });
 
+
+//API Route | DELETE request
 router.delete("/notes/:id",(req, res) => {
 
     var id = req.params.id;

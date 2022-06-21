@@ -2,7 +2,7 @@
 const router = require("express").Router();
 
 //linking index.js to routes.js
-const notes = rquire("./notes.js");
+const notes = require("./notes.js");
 
 router.use(notes);
 
