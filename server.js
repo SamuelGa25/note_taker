@@ -1,23 +1,37 @@
+
+//dependent variables defined
 const express = require("express"); 
-const app = express();
-
 const path = require("path");
-
-//api route located on different file. 
-const apiRoutes = require('./routes/apiRoutes');
-
-const PORT = process.env.PORT || 3001;
-
+const fs = require("fs");
+const util = require("util");
 
 //for incoming string or array
 app.use(express.urlencoded({extended: true}));
-app.use(express.json());
+app.use(express.json()); //incoming json data
+
+//server setup
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 //static middleware
-app.use(express.static("./public"));
+app.use(express.static(""))
 
-//linkig the app to apiRoutes
-app.use("/api", apiRoutes);
+const readFile = util.promisify(fs.promisify(fs.readFile));
+const writeFile = util.promisify(fs.promisify(fs.writeFile));
+
+//API ROUTE | 'GET' 
+app.get("/api/notes", function(req, res){
+    readFile("../../db/d");
+
+})
+
+
+
+
+
+
+
+
 
 //server now opening  
 app.listen(PORT, () =>{
@@ -25,16 +39,6 @@ app.listen(PORT, () =>{
 })
 
 
-//HTML Routes 
-app.get ('./notes',  function(req, res){
-    res.sendFile(path.join(__dirname, "../../public/notes.html"));
-})
-app.get ('/',  function(req, res){
-    res.sendFile(path.join(__dirname, "../../public/index.html"));
-})
-app.get ('*',  function(req, res){
-    res.sendFile(path.join(__dirname, "../../public/notes.html"));
-})
 
 
 

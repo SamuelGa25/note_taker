@@ -1,14 +1,12 @@
-{
 
-    "notes":[
+[
 
-        {
-            "title":"My first Note ",
-            "text":"let's check everything ",
-            "id": "0"
-        
-        }
-    ]
-}
+    {
+        "title":"My first Note ",
+        "text":"let's check everything "
+    
+    }
+]
+
 
     
