@@ -16,6 +16,17 @@
   ## Contribution 
   Samuel Garcia
 
+  ## Mock-Up Sample
+  ![Screen Shot 2022-06-23 at 10 33 39 PM](https://user-images.githubusercontent.com/100814742/175450800-1bdcc17a-3100-48fb-8b71-93db054d9588.png)
+
+  ![Screen Shot 2022-06-23 at 10 34 03 PM](https://user-images.githubusercontent.com/100814742/175450824-421be4cf-f753-4a86-8fb6-c86d99f90160.png)
+
+
+
+  ## Heroku app link deployed.
+  https://notetakernodeexpressjs.herokuapp.com/notes
+
+
   ## Contact Information:
   - UserName: [samuelga25]
   - Github: [samuelga25/note_taker](https://github.com/samuelga25/note_taker)
