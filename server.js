@@ -68,15 +68,15 @@ app.get("/notes", function(req, res){
 });
 app.get("*", function(req, res){
     res.sendFile(path.join(__dirname,"./public/index.html"));
-})
+});
 app.get("/", function(req, res){
     res.sendFile(path.join(__dirname,"./public/index.html"));
-})
+});
 
 //server now opening  
 app.listen(PORT, () =>{
     console.log(`server is running on http://localhost:${PORT}`)
-})
+});
 
 
 
