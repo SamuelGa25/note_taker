@@ -24,7 +24,7 @@
 
 
   ## Heroku app link deployed.
-  https://notetakernodeexpressjs.herokuapp.com/notes
+  https://notetakernodeexpressjs.herokuapp.com
 
 
   ## Contact Information:
